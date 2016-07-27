@@ -667,7 +667,7 @@ var ImageCropper = (function (_super) {
         this.drawImageIOSFix(this.cropCanvas.getContext('2d'), this.srcImage, Math.max(Math.round((bounds.left) / this.ratioW - offsetW), 0), Math.max(Math.round(bounds.top / this.ratioH - offsetH), 0), Math.max(Math.round(bounds.getWidth() / this.ratioW), 1), Math.max(Math.round(bounds.getHeight() / this.ratioH), 1), 0, 0, this.cropCanvas.width, this.cropCanvas.height);
         this.croppedImage.width = this.cropCanvas.width;
         this.croppedImage.height = this.cropCanvas.height;
-        this.croppedImage.src = this.cropCanvas.toDataURL("image/" + this.fileType);
+        this.croppedImage.src = this.cropCanvas.toDataURL("image/jpeg", 0.5);
         return this.croppedImage;
     };
     ImageCropper.prototype.getBounds = function () {
